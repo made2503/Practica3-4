@@ -23,7 +23,7 @@ module RockPaperScissors
 			player_throw = req.GET["choice"]
 			anwser = 
 				if !@throws.include?(player_throw)
-					"Elegir uno"
+					"Elegir una jugada"
 				elsif player_throw == computer_throw
 					"Empate"
 				elsif computer_throw == @defeat[player_throw]
@@ -50,7 +50,7 @@ if $0 == __FILE__
 	require 'rack'
 	Rack::Server.start(
 		:app => RockPaperScissors::RPS.new,
-		:Port => 8080,
+		:Port => 9292,
 		:server => 'thin'
 	)
 end
