@@ -159,6 +159,7 @@
   }
   .span4 {
     width: 370px;
+    border: 2px;
   }
   .span3 {
     width: 270px;

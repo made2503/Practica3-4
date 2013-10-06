@@ -24,14 +24,13 @@ RockPaperScissors.rb
 	
 	ruby /lib/RockPaperScissors.rb
 	rake
-	rake server
 	rake rock
 	rake paper
 	rake scissors
 
 ## VISTA ##
 
-	http://localhost:9292/
+	http://localhost:8080/
 
 
 ## DESARROLLADOR ##
