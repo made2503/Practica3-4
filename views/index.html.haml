@@ -1,31 +1,30 @@
 %html
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}
+    %title RPS
   %body
     %ol
       %a{:class => 'button', :href => '?choice=rock'} Rock
       %a{:href => '?choice=paper'} Paper
       %a{:href => '?choice=scissors'} Scissors
-    
 
     - if(player_throw == 'rock')
-      %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.jpg', :alt => 'Gana Roca'}
+      %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.jpg', :alt => 'Rock', :width => '100px', :border => '2px'}
     - elsif (player_throw == 'scissors')
-      %img{:src => 'http://banot.etsii.ull.es/alu4103/tijera.jpg', :alt => 'Gana Tijeras'}
+      %img{:src => 'http://banot.etsii.ull.es/alu4103/tijera.jpg', :alt => 'Scissors', :width => '100px', :border => '2px'}
     - elsif (player_throw == 'paper')
-      %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.jpg', :alt => 'Gana Papel'}
+      %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.jpg', :alt => 'Paper', :width => '100px', :border => '2px'}
 
     %h2 vs
-    
-    - system("pause")
 
     - if(computer_throw == 'rock')
-      %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.jpg', :alt => 'Gana Roca'}
+      %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.jpg', :alt => 'Rock', :width => '100px', :border => '2px'}
     - elsif (computer_throw == 'scissors')
-      %img{:src => 'http://banot.etsii.ull.es/alu4103/tijera.jpg', :alt => 'Gana Tijeras'}
+      %img{:src => 'http://banot.etsii.ull.es/alu4103/tijera.jpg', :alt => 'Scissors', :width => '100px', :border => '2px'}
     - elsif (computer_throw == 'paper')
-      %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.jpg', :alt => 'Gana Papel'}
-
+      %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.jpg', :alt => 'Paper', :width => '100px', :border => '2px'}
+    
+    %h3= anwser
 
     
 
