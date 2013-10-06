@@ -1,4 +1,4 @@
-desc "Formulario tweets de un usuario"
+desc "Jugada Piedra, Papel o Tijeras"
 task :default do
-  sh "ruby Formulario.rb"
+  sh "ruby lib/RockPaperScissors.rb"
 end
