@@ -1,6 +1,8 @@
 require 'rack/request'
 require 'rack/response'
 require 'haml'
+require 'thin'
+require 'rack'
 
 module RockPaperScissors
 	class RPS
@@ -49,7 +51,7 @@ end #Modulo
 if $0 == __FILE__
 	require 'rack'
 	Rack::Server.start(
-		:app => RockPaperScissors::RPS.new,
+		:app => RockPaperScissors::RPS.new
 		:Port => 9292,
 		:server => 'thin'
 	)
