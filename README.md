@@ -25,7 +25,7 @@ RockPaperScissors.rb
 
 ## VISTA ##
 
-	http://localhost:8080/
+	http://localhost:9292/
 
 
 ## DESARROLLADOR ##
