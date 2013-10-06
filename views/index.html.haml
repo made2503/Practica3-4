@@ -9,23 +9,22 @@
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container
-          %a.brand{:href => "#"} RPS
-          %ul.nav
-            %li
-              %a.brand{:href => '?choice=rock'} Rock
-            %li
-              %a.brand{:href => '?choice=paper'} Paper
-            %li
-              %a.brand{:href => '?choice=scissors'} Scissors
+          %center
+            %h3 RPS
+
+      .row.span2
+        %h4 PLAY!
+        .row.span1
+          %a{:href => '?choice=rock'} 
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
+          %a{:href => '?choice=paper'} 
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
+          %a{:href => '?choice=scissors'} 
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
 
     .container
-    
       %center
-        %h1 WELCOME TO THE GAME
-        %br
-
-      %center
-        .row.span3
+        .row.span5
           %h2 Player 1
           - if(player_throw == 'rock')
             %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.png', :alt => 'Rock', :width => '100px', :height => '30px', :border => '2px'}
@@ -34,7 +33,7 @@
           - elsif (player_throw == 'paper')
             %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.png', :alt => 'Paper', :width => '100px', :height => '30px', :border => '2px'}
 
-        .row.span1
+        .row.span2
           %h2 VS
 
         .row.span4
@@ -46,42 +45,36 @@
           - elsif (computer_throw == 'paper')
             %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.png', :alt => 'Paper', :width => '100px', :border => '2px'}
     
-        %br
-        %br
-        %br
-        -if (anwser == 'TIE')
-          %h4 TIE
-        - elsif (anwser == 'WIN')
-          - if ((player_throw == 'rock') && (computer_throw =='scissors'))
-            %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapiedra.png', :alt => 'Gana Piedra'}
-            %h4 PLAYER 1 WIN!
-          - elsif ((player_throw == 'scissors') && (computer_throw == 'paper'))
-            %img{:src => 'http://banot.etsii.ull.es/alu4103/ganatijeras.png', :alt => 'Gana Tijeras'}
-            %h4 PLAYER 1 WIN!
-          - elsif ((player_throw == 'paper') && (computer_throw == 'rock'))
-            %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapapel.png', :alt => 'Gana Papel'}
-            %h4 PLAYER 1 WIN!
+        .row.span12
+          - if (anwser == 'TIE')
+            %h4 TIE
+          - elsif (anwser == 'WIN')
+            - if ((player_throw == 'rock') && (computer_throw =='scissors'))
+              %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapiedra.png', :alt => 'Gana Piedra'}
+              %h4 PLAYER 1 WIN!
+            - elsif ((player_throw == 'scissors') && (computer_throw == 'paper'))
+              %img{:src => 'http://banot.etsii.ull.es/alu4103/ganatijeras.png', :alt => 'Gana Tijeras'}
+              %h4 PLAYER 1 WIN!
+            - elsif ((player_throw == 'paper') && (computer_throw == 'rock'))
+              %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapapel.png', :alt => 'Gana Papel'}
+              %h4 PLAYER 1 WIN!
 
-        - elsif (anwser == 'LOSE')
-          - if ((computer_throw == 'rock') && (player_throw =='scissors'))
-            %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapiedra.png', :alt => 'Gana Piedra'}
-            %h4 OUCH! PLAYER 2 WIN
-          - elsif ((computer_throw == 'scissors') && (player_throw == 'paper'))
-            %img{:src => 'http://banot.etsii.ull.es/alu4103/ganatijeras.png', :alt => 'Gana Tijeras'}
-            %h4 OUCH! PLAYER 2 WIN
-          - elsif ((computer_throw == 'paper') && (player_throw == 'rock'))
-            %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapapel.png', :alt => 'Gana Papel'}
-            %h4 OUCH! PLAYER 2 WIN
-        
-        %br
-        %br
-        - if (aux == "Choose one")
-          %h4 Choose one
+          - elsif (anwser == 'LOSE')
+            - if ((computer_throw == 'rock') && (player_throw =='scissors'))
+              %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapiedra.png', :alt => 'Gana Piedra'}
+              %h4 OUCH! PLAYER 2 WIN
+            - elsif ((computer_throw == 'scissors') && (player_throw == 'paper'))
+              %img{:src => 'http://banot.etsii.ull.es/alu4103/ganatijeras.png', :alt => 'Gana Tijeras'}
+              %h4 OUCH! PLAYER 2 WIN
+            - elsif ((computer_throw == 'paper') && (player_throw == 'rock'))
+              %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapapel.png', :alt => 'Gana Papel'}
+              %h4 OUCH! PLAYER 2 WIN
 
     %a{:href => '/'} Try again!
 
     .row.span12
       .footer
+        %br
         %br
         %br
         %br

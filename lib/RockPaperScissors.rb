@@ -25,7 +25,7 @@ module RockPaperScissors
 			else
 				computer_throw = @throws.sample
 			end
-
+     		
 			anwser = 
 				if (player_throw == computer_throw && (player_throw != '' && computer_throw != ''))
 					"TIE"
