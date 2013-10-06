@@ -13,7 +13,9 @@ Rock, Paper and Scissors
 
 **Paso 3.** Crearemos la carpeta `lib` donde a su vez crearemos el archivo `RockPaperScissors.rb` donde se jugará la partida.
 
-**Paso 4.** Creamos la carpeta `views` donde estarán todas nuestras vistas y donde a su vez crearemos el archivo `index.haml`:
+**Paso 4.** Creamos la carpeta `views` donde estarán todas nuestras vistas y donde a su vez crearemos el archivo `index.html.haml`.
+
+**Paso 5.** Crearemos la carpeta `public` donde estarán todos los archivos css
 	
 
 ## EJECUCIÓN ##
