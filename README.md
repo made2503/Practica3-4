@@ -22,8 +22,12 @@ Rock, Paper and Scissors
 
 RockPaperScissors.rb
 	
-	ruby RockPaperScissors.rb
+	ruby /lib/RockPaperScissors.rb
 	rake
+	rake server
+	rake rock
+	rake paper
+	rake scissors
 
 ## VISTA ##
 
