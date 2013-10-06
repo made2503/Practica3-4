@@ -4,4 +4,5 @@ group :development do
 	gem "rack"
 	gem "thin"
 	gem "haml"
+	gem "sinatra"
 end

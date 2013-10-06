@@ -1,6 +1,6 @@
 desc "Jugada Piedra, Papel o Tijeras"
 task :default do
-	sh "rackup"
+  sh "rackup"
 end
 
 desc "Ejecutar con piedra"
@@ -16,9 +16,4 @@ end
 desc "Ejecutar con tijeras"
 task :scissors do
 	sh %q{curl -v 'http://localhost:9292?choice=scissors'}
-end
-
-desc "Ejecutar servidor"
-task :server do
-	sh "rackup"
 end
