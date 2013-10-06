@@ -1,6 +1,6 @@
 desc "Jugada Piedra, Papel o Tijeras"
 task :default do
-  sh "ruby lib/RockPaperScissors.rb"
+	sh "rackup"
 end
 
 desc "Ejecutar con piedra"
