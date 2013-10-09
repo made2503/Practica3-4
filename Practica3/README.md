@@ -1,5 +1,3 @@
-<strong>![](http://banot.etsii.ull.es/alu4103/rps.png)</strong>
-
 Rock, Paper and Scissors
 ================================
 
@@ -13,10 +11,7 @@ Rock, Paper and Scissors
 
 **Paso 3.** Crearemos la carpeta `lib` donde a su vez crearemos el archivo `RockPaperScissors.rb` donde se jugará la partida.
 
-**Paso 4.** Creamos la carpeta `views` donde estarán todas nuestras vistas y donde a su vez crearemos el archivo `index.html.haml`.
-
-**Paso 5.** Crearemos la carpeta `public` donde estarán todos los archivos css
-	
+**Paso 4.** Creamos la carpeta `views` donde estarán todas nuestras vistas y donde a su vez crearemos el archivo `index.html.haml`.	
 
 ## EJECUCIÓN ##
 
@@ -24,14 +19,10 @@ RockPaperScissors.rb
 	
 	ruby /lib/RockPaperScissors.rb
 	rake
-	rake server
-	rake rock
-	rake paper
-	rake scissors
 
 ## VISTA ##
 
-	http://localhost:9292/
+	http://localhost:8080/
 
 
 ## DESARROLLADOR ##

@@ -47,3 +47,12 @@ module RockPaperScissors
 		end #call
 	end #Clase
 end #Modulo
+
+if $0 == __FILE__
+	require 'rack'
+	Rack::Server.start(
+		:app => RockPaperScissors::RPS.new,
+		:Port => 8080,
+		:server => 'thin'
+	)
+end
