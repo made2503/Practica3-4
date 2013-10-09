@@ -1,4 +1,4 @@
-<stong>![ROCKPAPERSCISSORS](http://banot.etsii.ull.es/alu4103/rps.png)</strong>
+<center>![ROCKPAPERSCISSORS](http://banot.etsii.ull.es/alu4103/rps.png)</center>
 
 ROCK PAPER SCISSORS
 ====================================================================
