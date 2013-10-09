@@ -1,0 +1,40 @@
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}
+    %title RPS
+  %body
+    %ol
+      %h3 RPS
+      - throws.map do |x|
+        %a{:href => "?choice=#{x}"} #{x}
+
+    %center
+      %h1 WELCOME TO THE GAME
+      %br
+
+    %center
+      %h2 Player 1
+      - if(player_throw == 'rock')
+        %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.png', :alt => 'Rock'}
+      - elsif (player_throw == 'scissors')
+        %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras.png', :alt => 'Scissors'}
+      - elsif (player_throw == 'paper')
+        %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.png', :alt => 'Paper'}
+
+      %h2 vs
+      
+      %h2 Player 2
+      - if(computer_throw == 'rock')
+        %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra.png', :alt => 'Rock'}
+      - elsif (computer_throw == 'scissors')
+        %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras.png', :alt => 'Scissors'}
+      - elsif (computer_throw == 'paper')
+        %img{:src => 'http://banot.etsii.ull.es/alu4103/papel.png', :alt => 'Paper'}
+    
+      %h3= anwser
+
+    
+
+
+
+
