@@ -2,8 +2,3 @@ desc "Jugada Piedra, Papel o Tijeras"
 task :default do
 	sh "rackup"
 end
-
-desc "Jugada"
-task :jugada do
-	sh "ruby RockPaperScissors.rb"
-end
