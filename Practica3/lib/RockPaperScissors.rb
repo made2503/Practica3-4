@@ -20,7 +20,7 @@ module RockPaperScissors
 			@throws = @defeat.keys
 
 			if !@throws.include?(player_throw)
-				aux = "Choose one"
+				aux = "PLAY!"
 			else
 				computer_throw = @throws.sample
 			end
