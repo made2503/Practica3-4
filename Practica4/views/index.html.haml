@@ -13,18 +13,25 @@
             %h3 RPS
 
       .row.span2
-        %h4 PLAY!
-        .row.span1
-          - throws.map do |x|
-            %a{:href => "?choice=#{x}"} 
-              - if ("#{x}" == 'rock')
-                %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
-              - elsif ("#{x}" == 'paper')
-                %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
-              - elsif ("#{x}" == 'scissors')
-                %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
-              - else
-                %a{:href => '/'}
+        %h5 PLAY HERE!
+        - if (aux == 'Choose one')
+          .row.span1
+            - throws.map do |x|
+              %a{:href => "?choice=#{x}"} 
+                - if ("#{x}" == 'rock')
+                  %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
+                - elsif ("#{x}" == 'paper')
+                  %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
+                - elsif ("#{x}" == 'scissors')
+                  %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
+                - else 
+                  %a{:href => '/'}
+        - else
+          .row.span1
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/piedra2.png', :alt => 'Rock'}
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
+            %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
+
 
 
     .container
@@ -56,26 +63,29 @@
           - elsif (anwser == 'WIN')
             - if ((player_throw == 'rock') && (computer_throw =='scissors'))
               %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapiedra.png', :alt => 'Gana Piedra'}
-              %h4 PLAYER 1 WIN!
+              %h4 PLAYER 1 WIN =)!
             - elsif ((player_throw == 'scissors') && (computer_throw == 'paper'))
               %img{:src => 'http://banot.etsii.ull.es/alu4103/ganatijeras.png', :alt => 'Gana Tijeras'}
-              %h4 PLAYER 1 WIN!
+              %h4 PLAYER 1 WIN =)!
             - elsif ((player_throw == 'paper') && (computer_throw == 'rock'))
               %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapapel.png', :alt => 'Gana Papel'}
-              %h4 PLAYER 1 WIN!
+              %h4 PLAYER 1 WIN =)!
 
           - elsif (anwser == 'LOSE')
             - if ((computer_throw == 'rock') && (player_throw =='scissors'))
               %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapiedra.png', :alt => 'Gana Piedra'}
-              %h4 OUCH! PLAYER 2 WIN
+              %h4 OUCH! PLAYER 2 WIN =(
             - elsif ((computer_throw == 'scissors') && (player_throw == 'paper'))
               %img{:src => 'http://banot.etsii.ull.es/alu4103/ganatijeras.png', :alt => 'Gana Tijeras'}
-              %h4 OUCH! PLAYER 2 WIN
+              %h4 OUCH! PLAYER 2 WIN =(
             - elsif ((computer_throw == 'paper') && (player_throw == 'rock'))
               %img{:src => 'http://banot.etsii.ull.es/alu4103/ganapapel.png', :alt => 'Gana Papel'}
-              %h4 OUCH! PLAYER 2 WIN
+              %h4 OUCH! PLAYER 2 WIN =(
 
-    %a{:href => '/'} Try again!
+    %a{:href => '/'}
+      %button.btn.btn-danger.btn-default 
+        Try again!
+        %i.icon-white.icon-thumbs-up
 
     .row.span12
       .footer
@@ -83,8 +93,10 @@
         %br
         %br
         %br
-        %h5 Madelaine Martin Pazo.
-        %h6 ETSII. ULL
+        %h6 
+          Madelaine Martin Pazo.
+          %br 
+          ETSII. ULL
 
     %script{:src => "/public/js/bootstrap.js"}
 
