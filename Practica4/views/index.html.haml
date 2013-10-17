@@ -23,6 +23,9 @@
                 %img{:src => 'http://banot.etsii.ull.es/alu4103/papel2.png', :alt => 'Scissors'}
               - elsif ("#{x}" == 'scissors')
                 %img{:src => 'http://banot.etsii.ull.es/alu4103/tijeras2.png', :alt => 'Paper'}
+              - else
+                %a{:href => '/'}
+
 
     .container
       %center

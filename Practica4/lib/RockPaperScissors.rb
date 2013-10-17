@@ -3,8 +3,7 @@ require 'rack/response'
 require 'haml'
 require 'thin'
 require 'rack'
-require 'sinatra'
-
+p "Iniciando Servidor en: http://localhost:8080"
 module RockPaperScissors
 	class RPS
 
